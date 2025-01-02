@@ -1,7 +1,9 @@
 <script setup lang="ts">
-
+import LayoutRoot from "~/components/composing/LayoutRoot.vue";
 </script>
 
 <template>
-  <div><slot /></div>
+  <LayoutRoot>
+    <slot />
+  </LayoutRoot>
 </template>

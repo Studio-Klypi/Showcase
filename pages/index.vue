@@ -1,10 +1,7 @@
 <script setup lang="ts">
-const { t } = useI18n();
+import PageRoot from "~/components/composing/PageRoot.vue";
 </script>
 
 <template>
-  <div>
-    <h1>{{ t("helloWorld") }}</h1>
-    <Button>{{ t("helloWorld") }}</Button>
-  </div>
+  <PageRoot />
 </template>
