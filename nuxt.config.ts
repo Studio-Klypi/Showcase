@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/i18n",
+    "@nuxt/image",
   ],
   devtools: { enabled: true },
   compatibilityDate: "2024-11-01",
