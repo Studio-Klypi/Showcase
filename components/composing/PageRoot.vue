@@ -8,6 +8,11 @@ interface PageProps {
 }
 const props = defineProps<PageProps>();
 const name = computed((): string => props.name ?? "home");
+
+const { t } = useI18n();
+useHead({
+  title: t(`${name.value}.tab`),
+});
 </script>
 
 <template>

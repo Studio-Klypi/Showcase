@@ -30,7 +30,7 @@ const { t } = useI18n();
         </ActionLink>
         <ActionLink to="mailto:contact@studio-klypi.com">
           <Mail />
-          <span>{{ t("layout.footer.emailAddress") }}</span>
+          <span>contact@studio-klypi.com</span>
         </ActionLink>
         <ExternalLink to="https://maps.app.goo.gl/ws3fWXXfcHKYDSA27">
           <MapPin />

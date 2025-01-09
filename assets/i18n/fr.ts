@@ -12,7 +12,6 @@ export default {
   layout: {
     footer: {
       phoneNumber: "03 88 31 53 86",
-      emailAddress: "contact@studio-klypi.com",
       postalAddress: "21 Rue Vincent Scotto,<br>67400 Illkirch-Graffenstaden",
       texts: {
         label: "Textes",
@@ -34,7 +33,9 @@ export default {
       author: "Dévéloppé avec ❤️",
     },
   },
+  // pages
   home: {
+    tab: "Klypi, pour un projet réussi !",
     hero: {
       title: "Nous sommes une <span class='text-primary'>agence</span> de création <span class='text-primary'>digitale</span>",
       subtitle: "Esprit Créatif, Réalisations Inspirées",

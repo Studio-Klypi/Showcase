@@ -80,7 +80,6 @@ const testimonials: {
         </div>
       </SectionContent>
     </SectionRoot>
-    <Separator class="mx-auto w-[min(calc(100%-4rem),1080px)]" />
     <SectionRoot
       name="services"
       class="py-24"
@@ -102,6 +101,7 @@ const testimonials: {
         />
       </SectionContent>
     </SectionRoot>
+    <Separator class="mx-auto w-[min(calc(100%-4rem),1080px)]" />
     <SectionRoot
       name="work"
       class="py-24"
