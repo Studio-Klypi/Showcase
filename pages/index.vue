@@ -5,6 +5,7 @@ import SectionRoot from "~/components/composing/page/SectionRoot.vue";
 import SectionContent from "~/components/composing/page/SectionContent.vue";
 import ServiceCard from "~/components/composed/home/ServiceCard.vue";
 import TestimonialCard from "~/components/composed/home/TestimonialCard.vue";
+import RecentWorkCarousel from "~/components/composed/home/RecentWorkCarousel.vue";
 
 const { t } = useI18n();
 
@@ -104,12 +105,14 @@ const testimonials: {
       name="work"
       class="py-24"
     >
-      <SectionContent class="flex flex-col">
+      <SectionContent class="flex flex-col gap-8">
         <h2 class="text-4xl lg:text-5xl font-barlowCondensed font-extrabold text-center">
           {{ t("home.work.title") }}
         </h2>
 
-        <!-- todo: carrousel -->
+        <SectionContent>
+          <RecentWorkCarousel />
+        </SectionContent>
       </SectionContent>
     </SectionRoot>
     <SectionRoot
