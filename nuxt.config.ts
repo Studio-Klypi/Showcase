@@ -22,8 +22,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      "Barlow": true,
-      "Barlow Condensed": true,
+      "Barlow": [400, 500, 600, 700, 800, 900],
+      "Barlow Condensed": [700, 800, 900],
     },
   },
   i18n: {
