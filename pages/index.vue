@@ -4,8 +4,56 @@ import PageRoot from "~/components/composing/PageRoot.vue";
 import SectionRoot from "~/components/composing/page/SectionRoot.vue";
 import SectionContent from "~/components/composing/page/SectionContent.vue";
 import ServiceCard from "~/components/composed/home/ServiceCard.vue";
+import TestimonialCard from "~/components/composed/home/TestimonialCard.vue";
 
 const { t } = useI18n();
+
+const testimonials: {
+  avatarUri?: string;
+  author: {
+    name: string;
+    job: string;
+  };
+  content: string;
+  note: number;
+}[] = [
+  {
+    avatarUri: "images/sophie-doe.png",
+    author: {
+      name: "Sophie DOE",
+      job: "Vétérinaire",
+    },
+    content: "Lorem ipsum dolor sit amet consectetur. Orci orci lectus elit sit. Scelerisque habitasse proin condimentum ac praesent morbi non potenti sagittis. Vel dui ut ante ultricies varius tortor ut. Massa mauris vulputate arcu lectus cursus erat.",
+    note: 4,
+  },
+  {
+    avatarUri: "images/john-doe.png",
+    author: {
+      name: "John DOE",
+      job: "Directeur Artistique",
+    },
+    content: "Lorem ipsum dolor sit amet consectetur. Orci orci lectus elit sit. Scelerisque habitasse proin condimentum ac praesent morbi non potenti sagittis. Vel dui ut ante ultricies varius tortor ut. Massa mauris vulputate arcu lectus cursus erat.",
+    note: 5,
+  },
+  {
+    avatarUri: "images/jane-doe.png",
+    author: {
+      name: "Jane DOE",
+      job: "Photographe",
+    },
+    content: "Lorem ipsum dolor sit amet consectetur. Orci orci lectus elit sit. Scelerisque habitasse proin condimentum ac praesent morbi non potenti sagittis. Vel dui ut ante ultricies varius tortor ut. Massa mauris vulputate arcu lectus cursus erat.",
+    note: 5,
+  },
+  {
+    avatarUri: "images/sarah-maria.png",
+    author: {
+      name: "Sarah Maria",
+      job: "Osthépathe",
+    },
+    content: "Lorem ipsum dolor sit amet consectetur. Orci orci lectus elit sit. Scelerisque habitasse proin condimentum ac praesent morbi non potenti sagittis. Vel dui ut ante ultricies varius tortor ut. Massa mauris vulputate arcu lectus cursus erat.",
+    note: 4.5,
+  },
+]; // todo: replace with data.
 </script>
 
 <template>
@@ -68,8 +116,21 @@ const { t } = useI18n();
       name="testimonial"
       class="py-24"
     >
-      <SectionContent>
-        <!-- todo: testimonial -->
+      <SectionContent class="items-center grid-rows-4">
+        <TestimonialCard
+          v-for="(test, index) in testimonials"
+          :key="`testimonial-${index})`"
+          :avatar-uri="test.avatarUri"
+          :author="test.author"
+          :content="test.content"
+          :note="test.note"
+          :class="{
+            'lg:row-start-2 xl:col-span-4': index === 0 || index === 3,
+            'lg:col-span-4 lg:col-start-4 xl:col-start-5': index === 1 || index === 2,
+            'lg:row-start-1': index === 1,
+            'lg:row-start-3': index === 2,
+          }"
+        />
       </SectionContent>
     </SectionRoot>
     <SectionRoot
