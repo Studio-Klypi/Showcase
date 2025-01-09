@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/i18n",
+    "@nuxt/image",
   ],
   devtools: { enabled: true },
   compatibilityDate: "2024-11-01",
@@ -22,8 +23,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      "Barlow": true,
-      "Barlow Condensed": true,
+      "Barlow": [400, 500, 600, 700, 800, 900],
+      "Barlow Condensed": [700, 800, 900],
     },
   },
   i18n: {
